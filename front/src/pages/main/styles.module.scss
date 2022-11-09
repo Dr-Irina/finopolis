@@ -1,0 +1,14 @@
+.container {
+  padding: 48px 32px;
+  height: 100%;
+  max-width: 1400px;
+  margin: auto;
+  @media screen and (max-width: 800px) {
+    padding: 32px 28px;
+  }
+}
+.footer {
+  @media screen and (max-width: 800px) {
+    margin: 0 -28px;
+  }
+}
