@@ -1,308 +1,66 @@
 .layoutHeaderContainer {
-  font-family: 'Montserrat-Bold';
+  background: #0B173F;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: row;
   width: 100%;
-  min-height: 64px;
-  padding: 0 40px;
-  height: 86px;
-  background: rgba(0, 0, 0, 0.05);
-  //backdrop-filter: blur(100px);
   z-index: 10;
   position: relative;
-  box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
-}
-.layoutHeaderContainerMobile {
-  padding: 0 24px;
-  position: initial;
+  padding: 32px 0;
 }
 
-.widthContainer {
-  max-width: 1400px;
+.linksContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+}
+.link {
+  font-family: 'Raleway';
+  font-size: 30px;
+  letter-spacing: -0.017em;
+  color: #E7EBF1;
+  margin-right: 72px;
+}
+.link:hover {
+  text-decoration: underline !important;
+  color: #E7EBF1;
+}
+.link:active, .link:focus {
+  color: #FFC001 !important;
 }
 
-.layoutHeaderAvatar {
-  margin: 16px 0px;
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
-}
-
-.layoutHeaderNoticeContainer {
-  margin: 14px 11px 20px 0px;
-  position: relative;
-  width: 37px;
-  min-width: 37px;
-}
-
-.layoutHeaderNoticeIcon {
-  position: absolute;
-  bottom: -4px;
-  left: 0px;
-  transform: scale(1.3125);
-}
-
-.layoutHeaderNoticeValue {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 22px;
-  height: 18px;
-  border-radius: 10px;
-  min-width: 22px;
-  font-size: 12px;
-  text-align: center;
-  line-height: 18px;
-  border: 1px solid white;
-  color: white;
-  box-sizing: content-box;
-}
-
-.layoutHeaderLabel {
-  font-family: Montserrat-Bold;
-  letter-spacing: 0em;
-  text-align: left;
-  display: flex;
-  font-size: 28px;
-  color: var(--text2);
-  margin: 29px 0;
-  @media screen and (max-width: 800px) {
-    margin: 0;
-  }
-}
-
-.layoutHeaderLeft {
-  flex: 1;
-  align-items: center;
-  display: flex;
-}
-
-.layoutHeaderLeft > div:last-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-.layoutHeaderRight {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-.logoContainer {
-  cursor: pointer;
+.userContainer {
   display: flex;
   align-items: center;
 }
-
-.logo {
-  width: 36px;
-  margin-right: 8px;
-  filter: var(--svg2);
-  @media screen and (max-width: 800px) {
-    width: 38px;
-  }
-}
-
-.search {
-  width: 600px !important;
-  height: 38px !important;
-  background: var(--search) !important;
-  backdrop-filter: blur(20px);
-  border-radius: 100px !important;
-  border: none !important;
-}
-.middleSearch {
-  width: 350px !important;
-}
-.miniSearch {
-  width: 100% !important;
-  margin-left: 0;
-}
-.lgSearch {
-  width: 450px !important;
-}
-.search input {
-  font-size: 18px;
-  line-height: 22px;
-  color: rgba(255, 255, 255, 0.65);
-  font-family: Montserrat;
-  border: none !important;
-}
-
-.search input::placeholder {
-  color: var(--placeholder) !important;
-}
-
-.menu {
-  font-family: Montserrat-Bold;
-  font-size: 18px;
-  text-align: center;
-  color: var(--text2);
+.userNameContainer {
   display: flex;
-  align-items: center;
-  margin: 0 18px;
-  cursor: pointer;
-  @media screen and (max-width: 1400px) {
-    font-size: 16px;
-    margin: 0 8px;
-  }
+  flex-direction: column;
+  margin-right: 16px;
 }
-.btn {
-  border-color: #316AD1 !important;
-  background: #316AD1 !important;
-  padding: 0 16px !important;
-  font-family: Montserrat-Bold;
-  font-size: 18px !important;
-  line-height: 22px;
-  text-align: center;
-  color: var(--text2);
-  margin-left: 14px;
-  height: 40px !important;
-  @media screen and (max-width: 500px) {
-    width: 100%;
-    margin: 0;
-  }
+.name {
+  font-family: 'Raleway';
+  font-size: 35px;
+  text-align: right;
+  letter-spacing: -0.017em;
+  color: #FFC001;
+}
+.role {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 25px;
+  text-align: right;
+  letter-spacing: -0.017em;
+  color: #E7EBF1;
+  margin-top: -18px;
 }
 .avatar {
-  background: var(--avatar);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  margin-left: 32px;
-  width: 46px;
-  height: 46px;
-  font-size: 32px;
+  object-fit: cover;
+}
+.container {
+  width: 1280px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.avatarImg {
-  width: 16px;
-  height: 30px;
-}
-.avatarLogin {
-  //background: conic-gradient(from 180deg at 50% 50%, #FF643F 0deg, rgba(255, 255, 255, 0) 180deg, #FF643F 360deg);
-  border-radius: 50%;
-  margin-left: 32px;
-  width: 46px;
-  height: 46px;
-  font-size: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.avatarContainer {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-}
-.profileContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 328px;
-  background: var(--main6);
-  border: 1px solid var(--text3);
-  box-sizing: border-box;
-  border-radius: 12px;
-  position: absolute;
-  right: 0;
-  top: 60px;
-  padding: 20px 28px;
-}
-
-.profileContainerMob {
-  position: absolute;
-  top: 86px;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  bottom: 0;
-  width: 100%;
-  border: none;
-  border-radius: 0;
   justify-content: space-between;
-}
-
-.profileBtnContainer {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  cursor: pointer;
-  width: 100%;
-  @media screen and (max-width: 500px) {
-    margin-bottom: 32px;
-  }
-}
-.profileBtnContainer:last-child {
-  margin-bottom: 0;
-}
-
-.profileBtnIc {
-  width: 46px;
-  height: 46px;
-  margin: 0 12px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.switchTheme {
-  border-top: 1px solid var(--main2);
-  @media screen and (max-width: 500px) {
-    padding-top: 32px;
-  }
-}
-.profileBntText {
-  font-family: Montserrat-Bold;
-  font-size: 18px;
-  line-height: 22px;
-  color: var(--text2);
-}
-
-.settings {
-  width: 24px;
-  height: 24px;
-  filter: var(--svg2);
-}
-
-.moneyContainer {
-  display: flex;
-  flex-direction: column;
-}
-.moneyCount {
-  font-family: Montserrat-Bold;
-  font-size: 18px;
-  line-height: 22px;
-  color: var(--text2);
-}
-.token {
-  font-family: Montserrat;
-  font-size: 13px;
-  line-height: 16px;
-  color: var(--text3);
-}
-.inputContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 800px) {
-    position: inherit;
-  }
-}
-.mobileBtn {
-  cursor: pointer;
-  filter: var(--svg2);
-}
-.mobileBtn:last-child {
-  margin-left: 16px;
-}
-.mobContainer {
-  width: 100%;
 }

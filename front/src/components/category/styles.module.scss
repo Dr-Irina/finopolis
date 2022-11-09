@@ -1,0 +1,64 @@
+.container {
+  width: 640px;
+  padding: 36px 12px 0 54px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.createContainer {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 100px;
+  letter-spacing: -0.017em;
+  color: #0B173F;
+  text-align: center;
+  padding: 0;
+}
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  width: calc(100% - 147px);
+  font-family: 'Raleway';
+  font-size: 64px;
+  letter-spacing: -0.017em;
+  margin-bottom: 18px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  background: #FFC001;
+  border: 8px solid #FFC001;
+  border-radius: 140px;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: -0.017em;
+  color: #FFFFFF;
+  height: 35px;
+}
+.dark {
+  background: #0B173F;
+  color: #FFFFFF;
+}
+.mid {
+  background: #7596BC;
+  color: #FFFFFF;
+}
+.light {
+  background: #E7EBF1;
+  color: #0B173F;
+}
+.description {
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: -0.017em;
+  margin-bottom: 50px;
+}
