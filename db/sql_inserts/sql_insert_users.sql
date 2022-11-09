@@ -1,0 +1,2 @@
+insert into users (id, id_role, name) values ('РКО', '601d0548-d6b3-4db8-82aa-9e5a6ad12a57', 'user');
+insert into users (id, id_role, name) values ('СДБО', 'd05bfaf8-76c9-4c54-8e7f-b4cc82cccc12', 'admin');
