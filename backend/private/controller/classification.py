@@ -5,7 +5,7 @@ import re
 
 logger = getLogger('app.controller.scoring')
 
-scoring_api = Blueprint("scoring", __name__, url_prefix="/classify")
+scoring_api = Blueprint("scoring", __name__, url_prefix="/scoring")
 
 @scoring_api.route('/', methods=['POST'])
 def score():
