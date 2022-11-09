@@ -3,6 +3,7 @@ from flask_jwt_extended import JWTManager
 from flask_wtf import CSRFProtect
 
 from private.controller import scoring_api
+from private.controller.requests import requests_api
 from private.util.db_creation import cli
 from private.db import db
 from logging.config import fileConfig
@@ -35,6 +36,7 @@ db.init_app(application)
 
 application.register_blueprint(scoring_api)
 application.register_blueprint(cli)
+application.register_blueprint(requests_api)
 # application.register_blueprint(user.user_api)
 # application.register_blueprint(cli.cli)
 # application.register_blueprint(news.news_api)
