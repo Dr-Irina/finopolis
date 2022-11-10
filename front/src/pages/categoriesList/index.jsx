@@ -42,8 +42,8 @@ const catMock = [
         name: 'Ex-РГСБ',
         description: ''
     },{
-        id: 2,
-        name: 'Прочие обращения\t',
+        id: 10,
+        name: 'Прочие обращения',
         description: ''
     },
 ]
