@@ -10,8 +10,9 @@ from private.db import db
 from private.db.entities import CustomerRequest, Category
 import re
 
+from private.model.model import morph
+
 logger = getLogger('app.controller.requests')
-morph = MorphAnalyzer(lang='ru')
 requests_api = Blueprint("requests", __name__, url_prefix="/requests")
 
 
@@ -22,7 +23,6 @@ def save_request():
     clean_text = re.sub('[,.\s]', ' ', text)
 
     normalized_words = [_normalize(word) for word in clean_text.split(' ')]
-    print(normalized_words[0])
     categorization_result = _categorize(normalized_words)
     if categorization_result.categorisation_options:
         return jsonify({
@@ -73,7 +73,10 @@ def _categorize(normalized_words: List[str]) -> CategorizationResult:
     :return:
     """
     all_categories = db.session.query(Category)
-    # TODO algorithm
+    normalized_words = set(normalized_words)
+    for c in all_categories:
+        if c.alias in normalized_words:
+            return CategorizationResult(1, [c])
     return CategorizationResult(1, [])
 
 

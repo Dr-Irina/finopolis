@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1280px;
+  padding: 116px 0 216px;
+  height: min-content;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.add_btn {
+  height: 100%;
+}

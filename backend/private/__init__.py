@@ -31,17 +31,11 @@ jwt.init_app(application)
 csrf.init_app(application)
 # дефолтный конфиг
 application.config.from_object(Config)
-# application.config.from_envvar('SETTINGS_FILE')
 db.init_app(application)
 
 application.register_blueprint(scoring_api)
 application.register_blueprint(cli)
 application.register_blueprint(requests_api)
-# application.register_blueprint(user.user_api)
-# application.register_blueprint(cli.cli)
-# application.register_blueprint(news.news_api)
-# application.register_blueprint(articles.articles_api)
-# application.register_blueprint(reviews.reviews_api)
 
 
 @application.route('/')

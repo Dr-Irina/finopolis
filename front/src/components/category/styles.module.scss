@@ -1,0 +1,123 @@
+.container {
+  width: 640px;
+  padding: 36px 12px 0 54px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  min-height: 230px;
+  position: relative;
+}
+.createContainer {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 100px;
+  letter-spacing: -0.017em;
+  color: #00BBE4;
+  text-align: center;
+  padding: 0;
+}
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  width: calc(100% - 147px);
+  font-family: 'Raleway';
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -0.017em;
+  margin-bottom: 18px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  background: #FFC001;
+  border: 8px solid #FFC001;
+  border-radius: 140px;
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: -0.017em;
+  color: #FFFFFF;
+  height: 35px;
+}
+.dark {
+  background: #00BBE4;
+  color: #FFFFFF;
+}
+.mid {
+  background: #CDD0D5;
+  color: #FFFFFF;
+}
+.light {
+  background: #FFFFFF;
+  color: #00BBE4;
+}
+.description {
+  font-family: 'Raleway';
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 29px;
+  letter-spacing: -0.017em;
+  margin-bottom: 50px;
+}
+.container:hover {
+  background: #00BBE4;
+}
+.container:hover .title {
+  color: #FFC001;
+  text-decoration: underline;
+}
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Radley';
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 101px;
+  letter-spacing: -0.067em;
+  color: #FFFFFF;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+  visibility: hidden;
+}
+.container:hover .action {
+  visibility: visible;
+}
+.container:hover .action:focus .action:active {
+  color: #FFC001;
+}
+.actionHeader {
+  font-family: 'Raleway';
+  font-size: 28px;
+  letter-spacing: -0.017em;
+  color: #000000;
+  padding: 52px 57px;
+}
+.actionRow {
+  font-family: 'Raleway';
+  font-size: 25px;
+  letter-spacing: -0.017em;
+  color: #000000;
+  padding: 22px 56px;
+  border-top: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+.actionRow:hover{
+  background: #CDD0D4;
+  color: #000000;
+  text-decoration: underline;
+}
+.actionContainer {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+}
