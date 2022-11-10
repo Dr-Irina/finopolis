@@ -49,7 +49,7 @@ const catMock = [
     description: '',
   },
   {
-    id: 2,
+    id: 10,
     name: 'Прочие обращения\t',
     description: '',
   },
