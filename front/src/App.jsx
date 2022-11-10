@@ -26,16 +26,6 @@ const App = () => {
 
   return (
     <div>
-      <InputForm
-        isOpen={isOpen}
-        title={'АВТОРИЗАЦИЯ'}
-        inputTitle1={'Логин'}
-        inputTitle2={'Пароль'}
-        buttonTitle={'ВОЙТИ'}
-        onSubmit={() => {
-          console.log('hello');
-        }}
-      />
       <BrowserRouter>
         <Switch>
           {privateRoutesList.map((route) => (
