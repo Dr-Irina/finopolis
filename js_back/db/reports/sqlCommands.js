@@ -12,14 +12,8 @@ const setReports = async (reports) => {
   await sql`insert into reports ${sql(reports, 'id', 'text')}`;
 };
 
-//
-const updateReportById = async () => {
-  return await sql`select * from reports`;
-};
-
 module.exports = {
   getReports,
   getReportById,
   setReports,
-  updateReportById,
 };
