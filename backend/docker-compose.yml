@@ -10,11 +10,20 @@ services:
       - ./log/nginx:/var/log/nginx
     ports:
       - 80:80
+  db:
+    image: postgres
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_USER=finopolis
+      - POSTGRES_PASSWORD=finopolis
   app:
+    depends_on:
+      - db
     image: application
     build:
       context: .
-    entrypoint: uwsgi --ini uwsgi.ini
+    entrypoint: bash -c 'while !</dev/tcp/db/5432; do sleep 3; done; uwsgi --ini uwsgi.ini'
     volumes:
       - ./:/home/appuser/app
       - ./log/app:/var/log/app
@@ -27,3 +36,17 @@ services:
     dns:
       - 8.8.8.8
       - 4.4.4.4
+  recreate-db:
+    image: application
+    depends_on:
+      - db
+    build:
+      context: .
+    command: bash -c 'while !</dev/tcp/db/5432; do sleep 3; done; flask cli recreate-db'
+    volumes:
+      - ./:/home/appuser/app
+      - ./log/app:/var/log/app
+    environment:
+      - FLASK_ENV=production
+      - SETTINGS_FILE=../config.cfg
+      - FLASK_APP=app.py

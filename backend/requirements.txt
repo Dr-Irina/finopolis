@@ -25,3 +25,5 @@ yarl==1.6.3
 sentencepiece==0.1.96
 torch==1.9.0
 transformers
+psycopg2-binary
+pymorphy2
