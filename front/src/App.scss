@@ -40,10 +40,10 @@ p {
   margin-bottom: 0;
 }
 
-.ant-btn {
-  height: unset !important;
-  border-radius: 8px !important;
-}
+//.ant-btn {
+//  height: unset !important;
+//  border-radius: 8px !important;
+//}
 
 .ant-modal {
   padding: 0 !important;
@@ -76,8 +76,11 @@ p {
   display: none !important;
 }
 
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: var(--text2) !important;
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn, .ant-tabs-tab:hover {
+  color: #00BBE4 !important;
+}
+.ant-tabs-tab {
+  font-size: 25px !important;
 }
 .ant-tabs-tab-btn {
   color: var(--text3);
@@ -98,14 +101,7 @@ p {
 }
 
 .ant-input {
-  border: 1px solid var(--main2) !important;
-  box-sizing: border-box;
-  border-radius: 12px !important;
-  padding: 16px 16px !important;
-  color: var(--text2) !important;
-  font-family: Montserrat;
-  font-size: 18px !important;
-  line-height: 22px;
+  background: #FFFFFF !important;
 }
 
 textarea {
@@ -193,4 +189,19 @@ input::placeholder {
 }
 .ant-modal-content {
   box-shadow: none !important;
+}
+.ant-input-group-addon {
+  background: transparent !important;
+}
+.ant-btn-primary {
+  border-color: #00BBE4 !important;
+  background: #00BBE4 !important;
+}
+.ant-collapse-header {
+  color: #00BBE4 !important;
+  font-size: 25px;
+}
+.ant-btn-dangerous.ant-btn-primary {
+  border-color: #CF1616!important;
+  background: #CF1616!important;
 }

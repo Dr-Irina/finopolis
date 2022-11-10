@@ -5,6 +5,7 @@
   flex-direction: column;
   cursor: pointer;
   min-height: 230px;
+  position: relative;
 }
 .createContainer {
   display: flex;
@@ -14,7 +15,7 @@
   font-weight: 500;
   font-size: 100px;
   letter-spacing: -0.017em;
-  color: #0B173F;
+  color: #00BBE4;
   text-align: center;
   padding: 0;
 }
@@ -46,16 +47,16 @@
   height: 35px;
 }
 .dark {
-  background: #0B173F;
+  background: #00BBE4;
   color: #FFFFFF;
 }
 .mid {
-  background: #7596BC;
+  background: #CDD0D5;
   color: #FFFFFF;
 }
 .light {
-  background: #E7EBF1;
-  color: #0B173F;
+  background: #FFFFFF;
+  color: #00BBE4;
 }
 .description {
   font-family: 'Raleway';
@@ -64,4 +65,59 @@
   line-height: 29px;
   letter-spacing: -0.017em;
   margin-bottom: 50px;
+}
+.container:hover {
+  background: #00BBE4;
+}
+.container:hover .title {
+  color: #FFC001;
+  text-decoration: underline;
+}
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Radley';
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 101px;
+  letter-spacing: -0.067em;
+  color: #FFFFFF;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+  visibility: hidden;
+}
+.container:hover .action {
+  visibility: visible;
+}
+.container:hover .action:focus .action:active {
+  color: #FFC001;
+}
+.actionHeader {
+  font-family: 'Raleway';
+  font-size: 28px;
+  letter-spacing: -0.017em;
+  color: #000000;
+  padding: 52px 57px;
+}
+.actionRow {
+  font-family: 'Raleway';
+  font-size: 25px;
+  letter-spacing: -0.017em;
+  color: #000000;
+  padding: 22px 56px;
+  border-top: 2px solid #FFFFFF;
+  cursor: pointer;
+}
+.actionRow:hover{
+  background: #CDD0D4;
+  color: #000000;
+  text-decoration: underline;
+}
+.actionContainer {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
 }

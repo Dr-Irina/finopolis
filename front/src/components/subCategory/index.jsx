@@ -4,6 +4,7 @@ import cx from 'classnames';
 import {useHistory} from "react-router-dom";
 import { reverse } from "named-urls";
 import paths from "../../pages/paths";
+import {Tooltip} from "antd";
 
 const SubCategory = ({category, index, create = false}) => {
     const history = useHistory();
@@ -16,7 +17,7 @@ const SubCategory = ({category, index, create = false}) => {
                 [styles.light]: index % 3 === 2,
                 [styles.createContainer]: create
             })}
-            onClick={() => create ? console.log('create') : history.push(reverse(paths.categoryInfo, {id: category.id}))}
+            onClick={() => create ? console.log('create') : history.push(reverse(paths.subCategoryInfo, {id: category.id, subId: category.subId}))}
         >
             {!create &&
                 <>
@@ -28,6 +29,15 @@ const SubCategory = ({category, index, create = false}) => {
                 </>
             }
             {create && <span>+</span>}
+            {!create && <Tooltip
+                title={<div className={styles.actionContainer}>
+                    <p className={styles.actionHeader}>Управление подкатегорией</p>
+                    <p className={styles.actionRow}>Редактировать</p>
+                    <p className={styles.actionRow}>Назначить технических специалистов</p>
+                    <p className={styles.actionRow}>Удалить</p>
+                </div>} color={'rgba(187, 243, 255, 0.9)'}>
+                <p className={styles.action}>...</p>
+            </Tooltip>}
         </div>
     );
 }

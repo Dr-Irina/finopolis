@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import Category from "../../components/subCategory";
+import {Breadcrumb} from "antd";
 
 const catMock = {
     id: 1,
@@ -25,10 +26,16 @@ const catMock = {
 
 const SubCategoriesList = () => (
     <div className={styles.content}>
+        <Breadcrumb>
+            <Breadcrumb.Item>
+                <a href="/">Категории</a>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>{catMock.name}</Breadcrumb.Item>
+        </Breadcrumb>
         <p className={styles.title}>{catMock.name}</p>
         {catMock.description && <p className={styles.description}>{catMock.description}</p>}
         <div className={styles.container}>
-            {catMock.sub.map((item, index) => (<Category key={item.id} category={item} index={index} />))}
+            {catMock.sub.map((item, index) => (<Category key={item.id} category={{...item, subId: catMock.id}} index={index} />))}
             <Category create index={catMock.sub.length} />
         </div>
     </div>

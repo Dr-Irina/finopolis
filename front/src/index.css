@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:500,700|Inter:600|Roboto:400&display=swap");
+@import '~antd/dist/antd.css';
 
 body {
   margin: 0;
@@ -101,3 +102,22 @@ li, dd, dt,ol, ul {
   .ant-upload.ant-upload-select-picture-card:hover {
     border: 2px dashed #1890ff !important;
   }
+.ant-tooltip-inner {
+  width: min-content !important;
+  max-width: min-content !important;
+}
+.ant-breadcrumb {
+  font-size: 25px;
+  margin-top: 24px;
+}
+.ant-breadcrumb a:hover {
+  color: #00BBE4 !important;
+}
+.ant-tabs-top > .ant-tabs-nav, .ant-tabs-bottom > .ant-tabs-nav, .ant-tabs-top > div > .ant-tabs-nav, .ant-tabs-bottom > div > .ant-tabs-nav {
+  margin: 0 !important;
+}
+.ant-tabs-content-holder {
+  background: #FFFFFF;
+  padding: 22px 28px;
+  width: 1280px;
+}
