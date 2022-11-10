@@ -61,3 +61,12 @@ create table keywords (
   id    varchar primary key,
   name  varchar
 );
+
+\! tput setaf 3; "____________________________________________________________________________________";
+\! tput setaf 1; "___________________________create table categories_keywords ____________________________";
+\! tput setaf 2;
+
+create table categories_keywords (
+  id_category varchar,
+  id_keyword  varchar
+);

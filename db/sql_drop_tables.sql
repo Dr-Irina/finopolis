@@ -5,3 +5,4 @@ drop table categories;
 drop table category_reports;
 drop table reports;
 drop table keywords;
+drop table categories_keywords
