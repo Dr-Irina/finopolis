@@ -74,7 +74,7 @@ li, dd, dt,ol, ul {
   /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color: var(--main2) var(--main1);
+    /*scrollbar-color: var(--main2) var(--main1);*/
   }
 
   /* Chrome, Edge, and Safari */
@@ -84,23 +84,23 @@ li, dd, dt,ol, ul {
   }
 
   *::-webkit-scrollbar-track {
-    background: var(--main1);
+    /*background: var(--main1);*/
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: var(--main2);
+    /*background-color: var(--main2);*/
     border-radius: 10px;
-    border: 3px solid var(--main1);
+    /*border: 3px solid var(--main1);*/
   }
   .ant-upload-select-picture-card {
     background: transparent !important;
-    border: 2px dashed var(--main1) !important;
+    /*border: 2px dashed var(--main1) !important;*/
     border-radius: 50px !important;
     margin: 2px !important;
     overflow: hidden !important;
-    &:hover: {
-      border: 2px dashed #1890ff !important;
-    }
+    /*&:hover: {*/
+    /*  border: 2px dashed #1890ff !important;*/
+    /*}*/
   }
   .ant-upload.ant-upload-select-picture-card:hover {
     border: 2px dashed #1890ff !important;
