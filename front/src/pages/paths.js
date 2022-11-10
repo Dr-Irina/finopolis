@@ -4,6 +4,6 @@ export default {
 	subCategoryInfo: '/category/:id/sub/:subId',
 	reportDetails: '/category/:id/sub/:subId/report/:reportId',
 	specialists: '/specialists',
-	management: '/management',
+	management: '/',
 	other: '/other'
 };

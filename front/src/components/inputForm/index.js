@@ -34,9 +34,10 @@ const IconClose = ({ onClose }) => {
 };
 
 export const InputForm = memo(
-  ({ title, inputTitle1, inputTitle2, buttonTitle, onSubmit, onClose }) => {
+  ({ title, inputTitle1, inputTitle2, buttonTitle, onSubmit, onClose, isOpen }) => {
     return (
-      <Modal className={styles.modal} open={true}>
+      <Modal className={styles.modal} open={isOpen}>
+        {/*{console.log('ooooooooopen')}*/}
         <div className={styles.container}>
           {onClose && <IconClose onClose={onClose} />}
           <div className={styles.content}>

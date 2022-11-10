@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import men from '../../assets/images/men.svg';
 import styles from './styles.module.scss';
 import cx from 'classnames';
@@ -6,11 +6,19 @@ import dots from '../../assets/images/dots.png';
 import {useHistory} from "react-router-dom";
 import {reverse} from "named-urls";
 import paths from "../../pages/paths";
-import {Tooltip} from "antd";
+import {Tooltip, Modal} from "antd";
+// import {InputForm} from "../inputForm";
 
 const Report = ({report, index}) => {
     const history = useHistory();
+    const [isOpen, setIsOpen] = useState(false);
     return (
+        <>
+            <Modal title="Basic Modal" open={true}  onCancel={() => setIsOpen(false)}>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+                <p>Some contents...</p>
+            </Modal>
         <div
             className={cx({[styles.container]: true,
                 [styles.dark]: index % 3 === 0,
@@ -37,18 +45,35 @@ const Report = ({report, index}) => {
                     </p>
                 </div>
             </div>
+            {/*<InputForm*/}
+            {/*    isOpen={isOpen}*/}
+            {/*    title={'Переназначить обращение'}*/}
+            {/*    inputTitle1={'Введите категорию'}*/}
+            {/*    inputTitle2={'Введите подкатегорию'}*/}
+            {/*    buttonTitle={'Добавить'}*/}
+            {/*    onSubmit={() => {*/}
+            {/*        setIsOpen(false)*/}
+            {/*    }}*/}
+            {/*/>*/}
+
             <Tooltip
                 arrowPointAtCenter
                 title={<div className={styles.actionContainer}>
                     <p className={styles.actionHeader}>Управление обращением</p>
                     <p className={styles.actionRow}>Рассмотреть</p>
-                    <p className={styles.actionRow}>Переназначить</p>
+                    <p className={styles.actionRow} onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        console.log("huita")
+                        setIsOpen(true)
+                    }}>Переназначить</p>
                     <p className={styles.actionRow}>Закрыть</p>
                     <p className={styles.actionRow}>Отклонить</p>
                 </div>} color={'rgba(187, 243, 255, 0.9)'}>
                 <img src={dots} className={styles.dots} />
             </Tooltip>
         </div>
+            </>
     );
 }
 
