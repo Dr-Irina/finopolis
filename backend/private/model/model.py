@@ -2,9 +2,11 @@ from collections import namedtuple
 from functools import lru_cache
 
 import torch
+from pymorphy2 import MorphAnalyzer
 from transformers import AutoModelForSequenceClassification
 from transformers import BertTokenizerFast
 
+morph = MorphAnalyzer(lang='ru')
 
 @lru_cache
 def init_models():
