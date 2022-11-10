@@ -56,7 +56,7 @@ const LayoutHeader = ({ width }) => {
             <p className={styles.role}>Администратор</p>
           </div>
           <img className={styles.avatar} src={avatar} />
-          <IconLogout />
+          {/*<IconLogout />*/}
         </div>
       </div>
     </div>
