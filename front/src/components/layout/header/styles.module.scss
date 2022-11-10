@@ -1,5 +1,5 @@
 .layoutHeaderContainer {
-  background: #0B173F;
+  background: #0b173f;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -17,15 +17,16 @@
   font-family: 'Raleway';
   font-size: 30px;
   letter-spacing: -0.017em;
-  color: #E7EBF1;
+  color: #e7ebf1;
   margin-right: 72px;
 }
 .link:hover {
   text-decoration: underline !important;
-  color: #E7EBF1;
+  color: #e7ebf1;
 }
-.link:active, .link:focus {
-  color: #FFC001 !important;
+.link:active,
+.link:focus {
+  color: #ffc001 !important;
 }
 
 .userContainer {
@@ -42,7 +43,7 @@
   font-size: 35px;
   text-align: right;
   letter-spacing: -0.017em;
-  color: #FFC001;
+  color: #ffc001;
 }
 .role {
   font-family: 'Raleway';
@@ -50,7 +51,7 @@
   font-size: 25px;
   text-align: right;
   letter-spacing: -0.017em;
-  color: #E7EBF1;
+  color: #e7ebf1;
   margin-top: -18px;
 }
 .avatar {
@@ -63,4 +64,10 @@
   width: 1280px;
   display: flex;
   justify-content: space-between;
+}
+
+.logout {
+  height: 48px;
+  cursor: pointer;
+  margin-left: -10px;
 }
