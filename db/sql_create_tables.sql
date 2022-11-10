@@ -49,8 +49,10 @@ create table category_reports (
 \! tput setaf 2;
 
 create table reports (
-  id      varchar primary key,
-  text    varchar
+  id          varchar primary key,
+  fullname    varchar,
+  text        varchar,
+  status      varchar
 );
 
 \! tput setaf 3; "____________________________________________________________________________________";
