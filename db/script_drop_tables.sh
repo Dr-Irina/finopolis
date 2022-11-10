@@ -5,5 +5,5 @@ purple=`tput setaf 5`
 reset=`tput sgr0`
 
 echo "${yellow}drop all tables and types${purple}"
-PGGSSENCMODE=disable psql -h localhost -d hackathon -U 19545303 -p 5432 -a -q -f /Users/19545303/project/reactnative/hack_back/db/sql_drop_tables.sql
+PGGSSENCMODE=disable psql -h localhost -d hackathon -U 19545303 -p 5432 -a -q -f /Users/19545303/project/reactnative/finopolis/db/sql_drop_tables.sql
 echo "${reset}"
